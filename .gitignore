@@ -1,0 +1,7 @@
+# IDE and editor files
+*.swp
+*.swo
+*~
+
+# Go build cache
+go.sum
