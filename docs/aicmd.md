@@ -1,10 +1,10 @@
-# AiCmd - AI Command Wrapper
+# aicmd - AI Command Wrapper
 
-AiCmd is a Go-based command wrapper designed specifically for VS Code Copilot AI interactions. It addresses the limitation that VS Code Copilot can only use one terminal session and hanging commands break AI progress.
+aicmd is a Go-based command wrapper designed specifically for VS Code Copilot AI interactions. It addresses the limitation that VS Code Copilot can only use one terminal session and hanging commands break AI progress.
 
 ## Overview
 
-AiCmd acts as a controller/supervisor process that spawns and monitors child processes, handles I/O redirection, enforces timeouts, and provides structured logging. It ensures no orphaned processes and provides robust process management for AI workflows.
+aicmd acts as a controller/supervisor process that spawns and monitors child processes, handles I/O redirection, enforces timeouts, and provides structured logging. It ensures no orphaned processes and provides robust process management for AI workflows.
 
 ## Features
 
@@ -94,7 +94,7 @@ echo "test input" > /tmp/input.txt
 # Background with output capture and organization
 ./aicmd --timeout=5m --work-dir=./temp --outs-dir=./temp/outputs --file-suffix=build go build ./...
 
-# Running other stai-tools binaries
+# Running other stai-bins binaries
 ./aicmd --timeout=30s --work-dir=./temp ../aijson/aijson --help
 
 # Output JSON metadata about the process
@@ -118,7 +118,7 @@ echo "test input" > /tmp/input.txt
 
 ## JSON Output Modes
 
-AiCmd supports JSON output for programmatic integration:
+aicmd supports JSON output for programmatic integration:
 
 ### JSON Metadata (`--json-meta`)
 Outputs process information in JSON format:
@@ -218,7 +218,7 @@ The `--wait` flag allows you to run in background mode but still wait for the pr
 
 ## Logging
 
-AiCmd creates timestamped log files in the `logs/` directory (or custom `--log-dir`) with the format:
+aicmd creates timestamped log files in the `logs/` directory (or custom `--log-dir`) with the format:
 ```
 logs/aicmd_YYYY-MM-DD_HH-MM-SS.mmm_PID.log
 logs/aicmd_YYYY-MM-DD_HH-MM-SS.mmm_PID_suffix.log (with --file-suffix)
@@ -236,7 +236,7 @@ outputs/aicmd_PID.out (with --no-date-in-name)
 
 The PID ensures unique file names when multiple aicmd processes run simultaneously.
 
-**Silent by Default**: AiCmd runs silently by default. All output is logged to files but not displayed on console unless `--verbose` flag is used.
+**Silent by Default**: aicmd runs silently by default. All output is logged to files but not displayed on console unless `--verbose` flag is used.
 
 Log format:
 ```
@@ -251,7 +251,7 @@ To see output on console, use `--verbose`:
 
 ## File Organization
 
-AiCmd provides comprehensive file organization options:
+aicmd provides comprehensive file organization options:
 
 ### Log Directory Control
 Use `--log-dir` to specify a custom directory for log files (defaults to `--work-dir/logs/`):
@@ -293,7 +293,7 @@ All options can be combined for comprehensive file management:
 
 ## Nested Invocation
 
-AiCmd supports nested invocation - running aicmd within another aicmd process. The child aicmd processes automatically have access to a clean environment without the parent's security restrictions, enabling seamless nested command execution.
+aicmd supports nested invocation - running aicmd within another aicmd process. The child aicmd processes automatically have access to a clean environment without the parent's security restrictions, enabling seamless nested command execution.
 
 ### Example
 ```bash
@@ -308,10 +308,6 @@ This capability is useful for:
 ## Build Instructions
 
 ```bash
-cd $HOME/work/stai-tools-src/cmd/aicmd
+cd $HOME/work/stai-tools/cmd/aicmd
 go build -o aicmd
 ```
-
-## AI Integration
-
-For AI usage instructions, see: `$HOME/work/stai-tools/ai-instructions/terminal-commands.md`

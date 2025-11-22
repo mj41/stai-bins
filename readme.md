@@ -1,12 +1,7 @@
-Tools and instructions for AIs running as GitHub Copilot in Visual Studio Code.
+A collection of instructions and tools for GitHub Copilot to enhance Visual Studio Code development with AI.
 
-Source codes are in `stai-tools-src` repository.
+Available [stai-tools overview](./docs/stai.md):
 
-Available [ai-tools overview](./docs/stai-tools.md):
-- [aiterm](./docs/aiterm.md) - AI terminal tool
-- [aicmd](./docs/aicmd.md) - AI command line tool
-- [aicont](./docs/aicont.md) - AI container tool
-- [aienv](./docs/aienv.md) - AI environment tool
+## Source Code
 
-Tools used internally by ai-tools:
-- [aicont-runner](./docs/aicont-runner.md) - AI container runner tool
+Source codes are in [stai-tools](https://github.com/mj41/stai-tools) repository and other repositories.
