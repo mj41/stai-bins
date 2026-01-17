@@ -16,6 +16,12 @@ aicmd is a Go-based command wrapper designed specifically for VS Code Copilot AI
 
 [Full documentation](./aiterm.md)
 
+### git-glfix
+
+git-glfix tracks and updates gl: links (e.g., `gl:path/to/file#L123`) as files change over time. It records snapshots in the repository and uses git history to adjust line references.
+
+[Full documentation](./git-glfix.md)
+
 ### git-wmem
 
 - **Multi-Repo Support**: Tracks and manages state across multiple git repositories simultaneously.
