@@ -233,16 +233,16 @@ The `--wait` flag allows you to run in background mode but still wait for the pr
 
 aicmd creates timestamped log files in the `logs/` directory (or custom `--log-dir`) with the format:
 ```
-logs/aicmd_YYYY-MM-DD_HH-MM-SS.mmm_PID.log
-logs/aicmd_YYYY-MM-DD_HH-MM-SS.mmm_PID_suffix.log (with --file-suffix)
+logs/cYYMMDD-HHMM-SSmmm-PID.log
+logs/cYYMMDD-HHMM-SSmmm-PID_suffix.log (with --file-suffix)
 logs/aicmd_PID_suffix.log (with --no-date-in-name --file-suffix)
 logs/aicmd_PID.log (with --no-date-in-name)
 ```
 
 Output files are created in the specified `--outs-dir` with matching naming:
 ```
-outputs/aicmd_YYYY-MM-DD_HH-MM-SS.mmm_PID.out
-outputs/aicmd_YYYY-MM-DD_HH-MM-SS.mmm_PID_suffix.out (with --file-suffix)
+outputs/cYYMMDD-HHMM-SSmmm-PID.out
+outputs/cYYMMDD-HHMM-SSmmm-PID_suffix.out (with --file-suffix)
 outputs/aicmd_PID_suffix.out (with --no-date-in-name --file-suffix)
 outputs/aicmd_PID.out (with --no-date-in-name)
 ```
